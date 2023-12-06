@@ -56,5 +56,5 @@ Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId (Get-AzureA
 
 ###New-ProtectionAlert can only be created if the tenant has an E5 license!###
 
-#Connect-IPPSSession -UserPrincipalName 'automations@sgnetgroup.onmicrosoft.com' -DelegatedOrganization $CustomerDomain -AzureADAuthorizationEndpointUri 'https://login.microsoftonline.com/common'
-#New-ProtectionAlert -Name "SGNG Quarantine Release Request Alert" -Category Others -ThreatType Activity -Operation QuarantineReleaseRequest -NotifyUser support@stgallennetgroup.ch -AggregationType None -Confirm:$false
+#Connect-IPPSSession -UserPrincipalName 'automations@yourcompany.com' -DelegatedOrganization $CustomerDomain -AzureADAuthorizationEndpointUri 'https://login.microsoftonline.com/common'
+#New-ProtectionAlert -Name "Quarantine Release request" -Category Others -ThreatType Activity -Operation QuarantineReleaseRequest -NotifyUser $AddressToBeNotified -AggregationType None -Confirm:$false
